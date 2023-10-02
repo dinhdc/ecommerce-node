@@ -1,4 +1,4 @@
-import mongoose, {Schema, model} from "mongoose";
+import {Schema, model} from "mongoose";
 import {IUser} from "../../interfaces";
 
 const userSchema =
@@ -18,4 +18,4 @@ const userSchema =
         lastLogin: Date
     })
 
-export const UserModel = mongoose.model("user", userSchema);
+export const UserModel = model("user", userSchema);

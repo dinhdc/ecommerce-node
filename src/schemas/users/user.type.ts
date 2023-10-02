@@ -1,4 +1,4 @@
-import mongoose, {Schema, model} from "mongoose";
+import {Schema, model} from "mongoose";
 import {IUserAdminType} from "../../interfaces";
 
 const uAdminTypeSchema =
@@ -9,4 +9,4 @@ const uAdminTypeSchema =
         modifiedAt: Date,
     })
 
-export const UAdminTypeModel = mongoose.model("user_admin_type", uAdminTypeSchema);
+export const UAdminTypeModel = model("user_admin_type", uAdminTypeSchema);
