@@ -8,7 +8,7 @@ const app: Application = express();
 app.use(json())
 app.use("/", routes)
 
-const uri: string = "mongodb+srv://admin:congdinh2k@cluster0.och3rtx.mongodb.net/db?retryWrites=true&w=majority"
+const uri: string = process.env.URI
 mongoose.connect(uri).then(() => console.log("connected to database")).catch(error => console.log(error))
 mongoose.set('toJSON', {
     virtuals: true,
