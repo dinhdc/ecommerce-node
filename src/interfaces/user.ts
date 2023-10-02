@@ -1,6 +1,5 @@
 import {Types} from 'mongoose';
 
-
 export interface IUserAddress {
     addressLine1: string,
     addressLine2: string,

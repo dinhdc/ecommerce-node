@@ -10,8 +10,7 @@ const signUpFunction = async (req: Request, res: Response) => {
     }
 }
 
-const UserController = {
+export const UserController = {
     signUpFunction
 }
 
-export default UserController

@@ -1,7 +1,1 @@
-import UserController from "./users.controller";
-
-const _ = {
-    UserController
-}
-
-export default _;
+export * from "./users.controller"
