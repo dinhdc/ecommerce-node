@@ -18,19 +18,14 @@ export interface IBaseUser {
     lastName: string,
     createdAt: Date,
     modifiedAt: Date,
-    lastLogin: Date
+    lastLogin: Date,
+    isAdmin: Boolean
 }
 
-export interface IUser extends IBaseUser {
+export type SignUpType = Omit<IBaseUser, "createdAt" | "modifiedAt" | "lastLogin">
+
+export interface ISignUp extends  SignUpType{}
+
+export interface IUser extends Partial<IBaseUser> {
 }
 
-export interface IAdminUser extends IBaseUser {
-    type: Types.ObjectId
-}
-
-export interface IUserAdminType {
-    adminType: string,
-    permission: string,
-    createdAt: Date,
-    modifiedAt: Date,
-}

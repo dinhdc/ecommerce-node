@@ -1,7 +1,10 @@
 import express, { Application } from "express";
 import {json} from "body-parser";
-import mongoose from "mongoose"
-import routes from "./src/routes"
+import mongoose from "mongoose";
+import dotenv from "dotenv"
+import routes from "./src/routes";
+
+dotenv.config();
 
 const app: Application = express();
 
@@ -14,6 +17,7 @@ mongoose.set('toJSON', {
     virtuals: true,
     transform: (doc, converted) => {
         delete converted._id;
+        delete converted.__v;
     }
 });
 const port = Number(process.env.PORT || 5000);

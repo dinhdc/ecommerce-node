@@ -15,7 +15,8 @@ const userSchema =
         lastName: String,
         createdAt: Date,
         modifiedAt: Date,
-        lastLogin: Date
+        lastLogin: Date,
+        isAdmin: Boolean
     })
 
 export const UserModel = model("user", userSchema);
