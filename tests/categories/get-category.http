@@ -1,0 +1,3 @@
+GET /api/products/categories/651d105d9b31b77a2140b64e HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json

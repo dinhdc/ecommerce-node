@@ -13,6 +13,8 @@ app.use("/", routes)
 
 const uri: string = process.env.URI
 mongoose.connect(uri).then(() => console.log("connected to database")).catch(error => console.log(error))
+
+// remove _id in object
 mongoose.set('toJSON', {
     virtuals: true,
     transform: (doc, converted) => {
@@ -20,6 +22,7 @@ mongoose.set('toJSON', {
         delete converted.__v;
     }
 });
+
 const port = Number(process.env.PORT || 5000);
 app.listen(port, () => {
     console.log(`Server running on ${port}`)

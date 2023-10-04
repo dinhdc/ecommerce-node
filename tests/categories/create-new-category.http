@@ -1,0 +1,10 @@
+POST /api/products/categories HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+Content-Length: 54
+AUTHORIZATION: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTY0MDcxMTEsInVzZXIiOnsidXNlcm5hbWUiOiJhZG1pbiIsImlzQWRtaW4iOnRydWUsImNyZWF0ZWRBdCI6IjIwMjMtMTAtMDRUMDc6MDk6MzQuMjgwWiIsIm1vZGlmaWVkQXQiOiIyMDIzLTEwLTA0VDA3OjA5OjM0LjI4MFoiLCJpZCI6IjY1MWQwZmFlNDY2MWU2Yzg4ZTUwNmY1YSJ9LCJpYXQiOjE2OTY0MDM1MTF9.xZZFrDcwFv8rHN3yHIdgN_IlRnpIXhTo-EecVm-isEQ
+
+{
+  "name": "test create category",
+  "desc": "test"
+}
