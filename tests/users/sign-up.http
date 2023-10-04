@@ -1,0 +1,8 @@
+POST /api/users/sign-up HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+Content-Length: 68
+
+{
+  "username": "testadmin1234"
+}

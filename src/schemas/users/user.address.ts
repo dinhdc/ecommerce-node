@@ -14,6 +14,14 @@ const userAddressSchema =
             ref: 'user',
             type: Schema.Types.ObjectId,
         },
+        createdAt: Date,
+        modifiedAt: Date
     })
+
+userAddressSchema.pre('save', function (next){
+    if(!this.createdAt) this.createdAt = new Date();
+    this.modifiedAt = new Date();
+    next();
+})
 
 export const UserAddressModel = model("user_address", userAddressSchema);

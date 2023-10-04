@@ -19,4 +19,10 @@ const userSchema =
         isAdmin: Boolean
     })
 
+userSchema.pre('save', function (next){
+    if(!this.createdAt) this.createdAt = new Date();
+    this.modifiedAt = new Date();
+    next();
+})
+
 export const UserModel = model("user", userSchema);

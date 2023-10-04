@@ -1,4 +1,5 @@
 import {Types} from 'mongoose';
+import {Request} from 'express'
 
 export interface IUserAddress {
     addressLine1: string,
@@ -8,6 +9,8 @@ export interface IUserAddress {
     country: string,
     telephone: string,
     mobile: string,
+    createdAt: Date,
+    modifiedAt: Date,
     user: Types.ObjectId
 }
 
@@ -29,3 +32,7 @@ export interface ISignUp extends  SignUpType{}
 export interface IUser extends Partial<IBaseUser> {
 }
 
+export interface AuthRequest extends Request {
+    user?: Omit<IUser, "password">;
+    token?: string;
+}

@@ -1,0 +1,4 @@
+GET /api/users/profile HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTYzNjIxMjAsInVzZXIiOnsidXNlcm5hbWUiOiJ0ZXN0YWRtaW4xMiIsImlzQWRtaW4iOmZhbHNlLCJpZCI6IjY1MWM2MDcxNjUwMTE2ZmZjNDMxM2M3YyJ9LCJpYXQiOjE2OTYzNTg1MjB9.TBQ4tCQUDDXYNzHih0Zs2NrhBCUvy3FT1cVpB5hZcLw
